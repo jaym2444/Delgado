@@ -8,8 +8,10 @@ namespace Delgado.Default.Macros
 {
     public class HotkeyConfigurator : IMacroConfigurator
     {
-        public HotkeyConfigurator(IMacro macro)
+        HotkeyMacro Host;
+        public HotkeyConfigurator(HotkeyMacro macro)
         {
+            Host = macro;
             Macro = macro;
             ConfigurationFields = new IMacroConfigurationField<object>[1];
             ConfigurationFields[0] = new MacroConfigurationField<TextboxField>("Random Text Here");
@@ -21,7 +23,7 @@ namespace Delgado.Default.Macros
 
         public void Configure(IMacroConfigurationField<object>[] results)
         {
-            
+            Host.Text = ((MacroConfigurationField<TextboxField>)results[0]).Value.Text;
         }
     }
 }

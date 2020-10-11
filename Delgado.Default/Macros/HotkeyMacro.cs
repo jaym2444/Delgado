@@ -8,6 +8,7 @@ namespace Delgado.Default.Macros
     [Macro]
     public class HotkeyMacro : IMacro
     {
+        internal string Text;
         public HotkeyMacro()
         {
             Configurator = new HotkeyConfigurator(this);
