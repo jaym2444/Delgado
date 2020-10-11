@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Delgado</name>
+    </assembly>
+    <members>
+        <member name="T:Delgado.Runtime.ConstructableMacro">
+            <summary>
+            A macro that can be constructed many times later on.
+            </summary>
+        </member>
+        <member name="M:Delgado.Runtime.ConstructableMacro.#ctor(System.Type,Delgado.Runtime.Plugin)">
+            <summary>
+            Constructs a new ConstructableMacro instance
+            </summary>
+            <param name="macroType">The type of the macro to be constructed</param>
+            <param name="Linked">The plugin linked to this macro is linked to</param>
+        </member>
+        <member name="P:Delgado.Runtime.ConstructableMacro.Name">
+            <summary>
+            The name of the macro
+            </summary>
+        </member>
+        <member name="P:Delgado.Runtime.ConstructableMacro.Plugin">
+            <summary>
+            The plugin the macro is associated with
+            </summary>
+        </member>
+        <member name="M:Delgado.Runtime.ConstructableMacro.Construct">
+            <summary>
+            Constructs a macro defined by a plugin
+            </summary>
+            <returns>The macro constructed</returns>
+        </member>
+        <member name="T:Delgado.Runtime.InvalidFileException">
+            <summary>
+            An exception to be thrown if a given file is invalid
+            </summary>
+        </member>
+        <member name="M:Delgado.Runtime.InvalidFileException.#ctor(System.String)">
+            <summary>
+            When a file loaded is not the file expected
+            </summary>
+            <param name="message">The message</param>
+        </member>
+        <member name="T:Delgado.Runtime.InvalidMacroException">
+            <summary>
+            When a macro is invalid
+            </summary>
+        </member>
+        <member name="T:Delgado.Runtime.InvalidPluginManifestException">
+            <summary>
+            When a plugin manifest is invalid
+            </summary>
+        </member>
+        <member name="T:Delgado.Runtime.Plugin">
+            <summary>
+            A plugin to be loaded
+            </summary>
+        </member>
+        <member name="P:Delgado.Runtime.Plugin.Name">
+            <summary>
+            The name of the plugin
+            </summary>
+        </member>
+        <member name="P:Delgado.Runtime.Plugin.Icon">
+            <summary>
+            The icon of the plugin
+            </summary>
+        </member>
+        <member name="P:Delgado.Runtime.Plugin.Macros">
+            <summary>
+            The macros defined by the plugin
+            </summary>
+        </member>
+        <member name="P:Delgado.Runtime.Plugin.Profiles">
+            <summary>
+            The profiles defined by the plugin
+            </summary>
+        </member>
+        <member name="M:Delgado.Runtime.Plugin.#ctor(System.String)">
+            <summary>
+            Loads a specific plugin assembly
+            </summary>
+            <param name="assembly">The location of the assembly</param>
+        </member>
+        <member name="M:Delgado.Runtime.Plugin.IsPlugin(System.String)">
+            <summary>
+            Gets if a given assembly is a valid Delgado plguin
+            </summary>
+            <param name="assembly">The assembly to evaluate</param>
+            <returns>If the assembly is a Delgado plugin</returns>
+        </member>
+        <member name="M:Delgado.Runtime.Plugin.processPlugin(System.Type)">
+            <summary>
+            Processes a type believed to hold the plugin manifest data
+            </summary>
+            <param name="t">The plugin manifest type</param>
+        </member>
+        <member name="M:Delgado.Runtime.Plugin.processMacro(System.Type)">
+            <summary>
+            Processes a type believed to be a macro
+            </summary>
+            <param name="t">The type of the macro</param>
+        </member>
+        <member name="M:Delgado.Runtime.Plugin.processProfile(System.Type)">
+            <summary>
+            Processes a type believed to be a profile
+            </summary>
+            <param name="t">The type of the profile</param>
+        </member>
+    </members>
+</doc>

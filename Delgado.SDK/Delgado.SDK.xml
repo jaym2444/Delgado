@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Delgado.SDK</name>
+    </assembly>
+    <members>
+        <member name="T:Delgado.SDK.IDelgadoPlugin">
+            <summary>
+            A delgado plugin manifest. Needed in order for the plugin to be recognized and loaded.
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.IDelgadoPlugin.Name">
+            <summary>
+            The name of the plugin
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.IDelgadoPlugin.Icon">
+            <summary>
+            The icon of the plugin
+            </summary>
+        </member>
+        <member name="T:Delgado.SDK.Macro.IMacro">
+            <summary>
+            A macro to be executed by a binded parameter
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Macro.IMacro.Configurator">
+            <summary>
+            Configures the setting of properties for the Macro
+            </summary>
+        </member>
+        <member name="M:Delgado.SDK.Macro.IMacro.Execute">
+            <summary>
+            Executes the macro
+            </summary>
+        </member>
+        <member name="T:Delgado.SDK.Macro.IMacroConfigurator">
+            <summary>
+            Configures a macro for use.
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Macro.IMacroConfigurator.ConfigurationFields">
+            <summary>
+            The fields that provide the configuration data
+            </summary>
+        </member>
+        <member name="M:Delgado.SDK.Macro.IMacroConfigurator.Configure">
+            <summary>
+            Configures a linked macro
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Macro.IMacroConfigurator.Macro">
+            <summary>
+            The linked macro
+            </summary>
+        </member>
+        <member name="T:Delgado.SDK.Macro.MacroAttribute">
+            <summary>
+            Attribute that defines and exposes a macro
+            </summary>
+        </member>
+        <member name="T:Delgado.SDK.Macro.MacroConfigurationField`1">
+            <summary>
+            A field to be used displayed and let the user configure
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Macro.MacroConfigurationField`1.Name">
+            <summary>
+            The name of the macro
+            </summary>
+        </member>
+        <member name="M:Delgado.SDK.Macro.MacroConfigurationField`1.#ctor(System.String)">
+            <summary>
+            Creates a new macro configuration field
+            </summary>
+            <param name="name">The name of the field</param>
+        </member>
+        <member name="P:Delgado.SDK.Macro.MacroConfigurationField`1.Value">
+            <summary>
+            The value of the macro
+            </summary>
+        </member>
+        <member name="M:Delgado.SDK.Macro.MacroConfigurationField`1.Is(System.Type)">
+            <summary>
+            Evaluates whether this configuration field recieves a given type
+            </summary>
+            <param name="t">The type to check for</param>
+            <returns>Whether 't' is a type that is accepted by the macro</returns>
+        </member>
+        <member name="T:Delgado.SDK.PluginAttribute">
+            <summary>
+            An attribute that exposes a plugin
+            </summary>
+        </member>
+        <member name="T:Delgado.SDK.Profile.IDelgadoField">
+            <summary>
+            Holds data about buttons and executors in Delgado
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Profile.IDelgadoField.Name">
+            <summary>
+            The name of the field
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Profile.IDelgadoField.Icon">
+            <summary>
+            The stream of the icon
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Profile.IDelgadoField.Macro">
+            <summary>
+            The macro to be executed by the button and field
+            </summary>
+        </member>
+        <member name="T:Delgado.SDK.Profile.IProfile">
+            <summary>
+            A profile to be enabled
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Profile.IProfile.Name">
+            <summary>
+            The name of the profile
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Profile.IProfile.Style">
+            <summary>
+            The style of the profile (if overridden)
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Profile.IProfile.UseCustomStyle">
+            <summary>
+            Whether the profile should use a custom style or not
+            </summary>
+        </member>
+        <member name="P:Delgado.SDK.Profile.IProfile.Fields">
+            <summary>
+            The fields being used and implemented by the profile
+            </summary>
+        </member>
+        <member name="T:Delgado.SDK.Profile.ProfileAttribute">
+            <summary>
+            Exposes a given profile 
+            </summary>
+        </member>
+    </members>
+</doc>
