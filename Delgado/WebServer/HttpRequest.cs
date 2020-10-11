@@ -35,12 +35,17 @@ namespace Delgado.WebServer
             } 
         }
         /// <summary>
+        /// The cookies used in the request
+        /// </summary>
+        public CookieDictionary Cookies { get; }
+        /// <summary>
         /// Creates a new HttpRequest object
         /// </summary>
         /// <param name="context">The context of the request</param>
         public HttpRequest(HttpListenerContext context)
         {
             (_context) = context;
+            Cookies = new CookieDictionary(this);
         }
 
         /// <summary>
