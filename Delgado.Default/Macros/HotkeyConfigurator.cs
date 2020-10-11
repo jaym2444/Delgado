@@ -11,18 +11,17 @@ namespace Delgado.Default.Macros
         public HotkeyConfigurator(IMacro macro)
         {
             Macro = macro;
-            ConfigurationFields = new MacroConfigurationField<IMacroConfigurationField>[] { 
-                new MacroConfigurationField<TextboxField>(""),
-            };
+            ConfigurationFields = new IMacroConfigurationField<object>[1];
+            ConfigurationFields[0] = new MacroConfigurationField<TextboxField>("Random Text Here");
         }
 
         public IMacro Macro {get;}
 
-        public MacroConfigurationField<IMacroConfigurationField>[] ConfigurationFields { get; }
+        public IMacroConfigurationField<object>[] ConfigurationFields { get; }
 
-        public void Configure(MacroConfigurationField<IMacroConfigurationField>[] results)
+        public void Configure(IMacroConfigurationField<object>[] results)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Delgado.SDK.Fields
     /// <summary>
     /// A textbox field
     /// </summary>
-    public class TextboxField:IMacroConfigurationField
+    public class TextboxField
     {
 
     }

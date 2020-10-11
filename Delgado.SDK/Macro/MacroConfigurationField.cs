@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Delgado.SDK.Fields;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace Delgado.SDK.Macro
     /// <summary>
     /// A field to be used displayed and let the user configure
     /// </summary>
-    public class MacroConfigurationField<T>
+    public class MacroConfigurationField<T> : IMacroConfigurationField<T>
     {
         /// <summary>
         /// The name of the macro

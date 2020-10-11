@@ -13,11 +13,11 @@ namespace Delgado.SDK.Macro
         /// <summary>
         /// The fields that provide the configuration data
         /// </summary>
-        public MacroConfigurationField<IMacroConfigurationField>[] ConfigurationFields { get; }
+        public IMacroConfigurationField<object>[] ConfigurationFields { get; }
         /// <summary>
         /// Configures a linked macro
         /// </summary>
-        public void Configure(MacroConfigurationField<IMacroConfigurationField>[] results);
+        public void Configure(IMacroConfigurationField<object>[] results);
         /// <summary>
         /// The linked macro
         /// </summary>
