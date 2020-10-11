@@ -11,6 +11,14 @@ namespace Delgado.SDK.Macro
     public class MacroConfigurationField<T> : IMacroConfigurationField<T>
     {
         /// <summary>
+        /// Creates a new macro configuration field
+        /// </summary>
+        public MacroConfigurationField()
+        {
+            Value = Activator.CreateInstance<T>();
+        }
+
+        /// <summary>
         /// The name of the macro
         /// </summary>
         public string Name { get; }
